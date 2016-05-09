@@ -4,12 +4,11 @@ author: "JRB"
 date: "05MAY2016"
 output: pdf_document
 ---
-## This code book describes the variables defined in the tidy1.txt dataset
-## The variable name in the derived dataset (summarybysubjectactivity.txt) 
-## are the mean of each of those variables summarized by subject and activity
-## and are named meanofxxxx where xxx is the original variable name from tidy1 
-## so for example timebodyaccelerationmeany becomes meanoftimebodyaccelerationmeany 
-## in the summarized data set
+*This code book describes the variables defined in the tidy1.txt dataset* 
+---
+*NOTE: The variable name in the derived dataset (summarybysubjectactivity.txt) are named meanofxxxx where xxx is the original variable name from tidy1 so for example timebodyaccelerationmeany becomes meanoftimebodyaccelerationmeany*
+---
+ 
 ID | Variable Name              | Type  |measure|axis|domain|description|Unit|
 ---|----------------------------|----- |-------|----|------|----------|----|
 1  | subject                    |NA     |NA     |NA  | NA   |subject ID|NA  |
