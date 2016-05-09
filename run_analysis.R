@@ -65,6 +65,7 @@ colnames(dftidy1) <- vlabels
 if(!require(dplyr)) {install.packages("dplyr")
                      library(dplyr)}
 tbltidy <- tbl_df(dftidy1)
+write.table(dftidy1,file="./data/tidy1.txt",col.names=FALSE)
 ## create the derived data set using aggregate
 tblsummarybysubjectactivity <- tbltidy %>% group_by(subject,activity) %>% summarise_each(funs(mean))
 ## let's rename the columns
@@ -74,5 +75,4 @@ vlabels <- c("subject","activity",vlabels)
 colnames(tblsummarybysubjectactivity) <- vlabels
 ## All clean -- Done
 ## Now exporting the datasets ready to be shared
-##write.csv(tbltidy,file="./data/tbltidy.csv",auote=FALSE,col.names=TRUE)
 write.table(tblsummarybysubjectactivity,file="./data/summarybysubjectactivity.txt",col.names=FALSE)
